@@ -90,7 +90,7 @@ class Form extends React.Component {
     renderSubmitted() {
         return (
         <div className={`submitted`}>
-            <p>Glad you're interested! We'll send you an invite as soon we're done coding.</p>
+            <p>Glad you're interested! We'll send you an invite as soon as we're done coding.</p>
         </div>
         )
     }
