@@ -17,7 +17,6 @@ export default {
       <Body>{children}</Body>
     </Html>
   ),
-  siteRoot: '/',
   entry: path.join(__dirname, 'src', 'index.tsx'),
   getRoutes: async () => {
     return [
