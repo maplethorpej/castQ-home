@@ -1,16 +1,38 @@
 import React from 'react'
 import path from 'path'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
+import ReactStaticFavicons from '@kuroku/react-static-favicons'
 
 // Paths Aliases defined through tsconfig.json
 const typescriptWebpackPaths = require('./webpack.config.js')
 
+const reactStaticFavicons = new ReactStaticFavicons({
+  // string: directory where the image files are written
+  outputDir: path.join(__dirname, 'dist'),
+
+  // string: the source image
+  inputFile: path.join(__dirname, 'favicon.png'),
+
+  // object: the configuration passed directory to favicons
+  configuration: {
+    icons: {
+      favicons: true,
+      // other favicons configuration
+    },
+  },
+})
+
 export default {
-  Document: ({ Html, Head, Body, children }) => (
+  renderToHtml: async (render, C, meta) => {
+    meta.faviconsElements = await reactStaticFavicons.render()
+    return render(<C />)
+  },
+  Document: ({ Html, Head, Body, children, renderMeta }) => (
     <Html lang="en-US">
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {renderMeta.faviconsElements}
         <title>CastQ – Find your next podcast guest</title>
         <link rel="stylesheet" href="https://use.typekit.net/eme3hjr.css" />
       </Head>
