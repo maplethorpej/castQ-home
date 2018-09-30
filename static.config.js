@@ -1,5 +1,6 @@
 import React from 'react'
 import path from 'path'
+import ExtractTextPlugin from 'extract-text-webpack-plugin'
 
 // Paths Aliases defined through tsconfig.json
 const typescriptWebpackPaths = require('./webpack.config.js')
@@ -16,6 +17,7 @@ export default {
       <Body>{children}</Body>
     </Html>
   ),
+  siteRoot: '/',
   entry: path.join(__dirname, 'src', 'index.tsx'),
   getRoutes: async () => {
     return [
@@ -62,6 +64,7 @@ export default {
         ],
       },
     ]
+    config.plugins.push(new ExtractTextPlugin('styles.css'))
     return config
   },
 }
