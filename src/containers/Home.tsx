@@ -44,6 +44,10 @@ const MainContainer = styled.div`
         width: 50%;
     }
     
+    .left a {
+        color: #ffffff;
+    }
+    
     .right {
         width: 40%;
         margin-left: 10%;
@@ -93,7 +97,7 @@ export default () => (
                 <p>Our goal is to make it easier for you to find interesting guests to invite onto your show.
                     We also want to help you filter out the self-promotional clutter.</p>
 
-                <p>Have feedback for us? We're good listeners. Reach out on Twitter at @maplethorpej or @castq.</p>
+                <p>Have any feedback? Reach out on Twitter at <a href="https://twitter.com/maplethorpej" target="_blank">@maplethorpej.</a></p>
             </div>
             <div className={`right`}>
                 <Form/>
