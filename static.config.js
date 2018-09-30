@@ -30,6 +30,15 @@ export default {
   Document: ({ Html, Head, Body, children, renderMeta }) => (
     <Html lang="en-US">
       <Head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126625261-1" />
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-126625261-1');
+        </script>
+
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {renderMeta.faviconsElements}
