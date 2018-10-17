@@ -35,6 +35,9 @@ export default {
         {renderMeta.faviconsElements}
         <title>CastQ – Find your next podcast guest</title>
         <link rel="stylesheet" href="https://use.typekit.net/eme3hjr.css" />
+        <meta property="og:title" content="CastQ" />
+        <meta property="og:url" content="https://castq.io" />
+        <meta property="og:image" content="https://castq.io/castq_social.jpg" />
       </Head>
       <Body>{children}</Body>
     </Html>
