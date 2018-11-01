@@ -1,62 +1,25 @@
 body {
-    font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue',
-    Helvetica, Arial, 'Lucida Grande', sans-serif;
+    font-family: open-sans, sans-serif;
     font-weight: 300;
     font-size: 16px;
-    margin: 0 0 48px;
+    margin: 0;
     padding: 0;
-    color: #fff;
-    background-color: #E35446;
-}
-
-img {
-    max-width: 100%;
-}
-
-.content {
-    max-width: 680px;
-    padding: 0 10px;
-    margin: 0 auto;
+    color: #707070;
+    background-color: #FFF;
 }
 
 h1, h2, h3, h4, h5 {
-    font-family: "Filson Pro", sans-serif;
-    margin: 0;
+    font-family: filson-soft, sans-serif;
 }
 
 h1 {
-    font-size: 2.85em;
-    font-weight: 200;
-    margin: 8px 0;
-    padding-bottom: 16px;
-    display: inline-block;
-    border-bottom: 2px solid #FFC84D;
-}
-
-h2 {
-    color: #FFC84D;
-    font-size: 1.8em;
-    margin: 0 0 18px;
-    font-weight: 300;
-}
-
-h5 {
-    color: #E35446;
-    font-size: 1.2em;
+    color: #b72727;
     font-weight: 400;
-    margin-bottom: 16px;
 }
 
 p {
-    font-family: "Open Sans", sans-serif;
-    line-height: 1.5em;
-    margin-bottom: 16px;
-}
-
-p.intro {
-    font-size: 1.15em;
-    line-height: 1.7em;
-    margin: 0 0 8px 24px;
+    font-size: 1.1em;
+    line-height: 1.4em;
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */

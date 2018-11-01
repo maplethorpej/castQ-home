@@ -33,7 +33,7 @@ export default {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {renderMeta.faviconsElements}
-        <title>CastQ – Find your next podcast guest</title>
+        <title>CastQ – Give your listeners a voice</title>
         <link rel="stylesheet" href="https://use.typekit.net/eme3hjr.css" />
         <meta property="og:title" content="CastQ" />
         <meta property="og:url" content="https://castq.io" />
