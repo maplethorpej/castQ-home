@@ -6,10 +6,7 @@ import {Button} from './Button'
 
 class Form extends React.Component {
     state = {
-        name: '',
         email: '',
-        podcast: '',
-        details: '',
         submitting: false,
         submitted: false,
         emailError: false
@@ -17,11 +14,7 @@ class Form extends React.Component {
 
     handleSubmit = (e: React.MouseEvent<HTMLElement>) => {
         e.preventDefault();
-        const {name, email, podcast, details} = this.state;
-
-        if (!email || !name) {
-            return;
-        }
+        const {email} = this.state;
 
         if (!this.validateEmail(email)) {
             this.setState({emailError: true});
@@ -29,27 +22,14 @@ class Form extends React.Component {
         }
 
         this.setState({submitting: true, emailError: false});
-        const formData = {name, email, podcast, details}
-        axios.get(`https://hooks.zapier.com/hooks/catch/1508074/lbzjne/?${queryString.stringify(formData)}`)
+        axios.get(`https://hooks.zapier.com/hooks/catch/1508074/lbzjne/?${queryString.stringify({email})}`)
             .then(() => {
                 this.setState({submitted: true});
             });
     };
 
-    updateName = (value: string) => {
-        this.setState({name: value});
-    };
-
     updateEmail = (value: string) => {
         this.setState({email: value});
-    };
-
-    updatePodcast = (value: string) => {
-        this.setState({podcast: value});
-    };
-
-    updateDetails = (value: string) => {
-        this.setState({details: value});
     };
 
     validateEmail(email: string) {
@@ -58,31 +38,19 @@ class Form extends React.Component {
     }
 
     renderFields() {
-        const {name, email, podcast, details, submitting, emailError} = this.state;
+        const {email, submitting, emailError} = this.state;
         return (
             <div>
                 <label>
-                    <div>Your name <span>*</span></div>
-                    <input placeholder={`Sam Harris`} value={name} onChange={(e) => this.updateName(e.target.value)}/>
+                    Request an invite
                 </label>
-                <label>
-                    <div>Email <span>*</span></div>
-                    <input placeholder={`email@podcast.com`} value={email} className={emailError ? 'error' : ''}
-                           onChange={(e) => this.updateEmail(e.target.value)}/>
-                </label>
-                <label>
-                    <div>Podcast name</div>
-                    <input placeholder={`The Best Podcast Ever`} value={podcast}
-                           onChange={(e) => this.updatePodcast(e.target.value)}/>
-                </label>
-                <label>
-                    <div>How do you currently find guests?</div>
-                    <textarea placeholder={`Networking, Twitter, LinkedIn, etc.`} value={details}
-                              onChange={(e) => this.updateDetails(e.target.value)}/>
-                </label>
+                <div className="input-container">
+                <input placeholder={`email@podcast.com`} value={email} className={emailError ? 'error' : ''}
+                       onChange={(e) => this.updateEmail(e.target.value)}/>
                 <Button onClick={this.handleSubmit} type="submit" disabled={submitting}>
-                    Request Invite
+                    Submit
                 </Button>
+                </div>
             </div>
         )
     }
@@ -96,10 +64,8 @@ class Form extends React.Component {
     }
 
     render() {
-
         return (
             <FormContainer>
-                <h5>Request an invite</h5>
                 {!this.state.submitted && this.renderFields()}
                 {this.state.submitted && this.renderSubmitted()}
             </FormContainer>

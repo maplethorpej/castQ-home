@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import logoImg from '../img/castQ-logo-horizontal.png';
 
-// import Form from '../components/Form';
+import Form from '../components/Form';
 
 const TopSection = styled.div`
     padding: 32px 0;
@@ -18,6 +18,20 @@ const Inner = styled.div`
     margin: 0 auto;
 `;
 
+const Grid = styled.div`
+    display: flex;
+    margin: 32px 0;
+    justify-content: space-between;
+    
+    .left {
+      width: 66%;
+    }
+    
+    .right {
+      width: 33%;
+    }
+`;
+
 const Logo = styled.img`
     max-width: 120px;
 `;
@@ -31,8 +45,16 @@ export default () => (
                 </Inner>
             </header>
             <Inner>
-                <h1>Give your listeners a voice.</h1>
-                <p>Propose topics you’d like to discuss on your podcast and let your listeners submit their questions and recommend guests.</p>
+                <Grid>
+                    <div className="left">
+                        <h1>Give your listeners a voice.</h1>
+                        <p>Propose topics you’d like to discuss on your podcast and let your listeners submit their questions and recommend guests.</p>
+                        <Form/>
+                    </div>
+                    <div className="right">
+                        Placeholder
+                    </div>
+                </Grid>
             </Inner>
         </TopSection>
     </div>

@@ -3,11 +3,11 @@ import styled from "styled-components";
 export const Button = styled.button`
     border: none;
     color: #ffffff;
-    padding: 16px;
+    padding: 8px;
     font-family: "Open Sans", sans-serif;
-    background-color: #E35446;
-    width: 100%;
-    font-size: 1.1em;
+    background-color: #b72727;
+    font-size: 1em;
+    font-weight: 700;
     border-radius: 2px;
     
     &:focus {
