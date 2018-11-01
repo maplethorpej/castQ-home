@@ -19,6 +19,16 @@ export const FormContainer = styled.form`
         button {
             width: 20%;
         }
+        
+        @media screen and (max-width: 620px) {
+            input {
+                width: 60%;
+            }
+            button {
+                width: 40%;
+            }
+        }
+
     }
    
     input {

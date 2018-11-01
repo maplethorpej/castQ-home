@@ -28,8 +28,9 @@ const BottomSection = styled.div`
 `;
 
 const Inner = styled.div`
-    width: 900px;
+    max-width: 900px;
     margin: 0 auto;
+    padding: 0 16px;
 `;
 
 const Grid = styled.div`
@@ -50,14 +51,49 @@ const Grid = styled.div`
     .ui-example {
       width: 30%;
     }
+    
+    @media screen and (max-width: 620px) {
+        flex-direction: column-reverse;
+        
+        .content, .cover-image, .ui-example {
+            width: 100%;
+        }
+        
+        .content {
+           h1, h2, p {
+              text-align: center;
+           }
+        }
+    }
 `;
 
 const Logo = styled.img`
     max-width: 120px;
+    
+    @media screen and (max-width: 620px) {
+        margin: 0 auto;
+        display: block;
+        width: 100%;
+        max-width: 220px;
+    }
 `;
 
 const Microphone = styled.img`
-  max-width: 100px;
+    max-width: 100px;
+    
+    @media screen and (max-width: 620px) {
+        display: none;
+    }
+`;
+
+const UIExampleImg = styled.img`
+    width: 100%;
+    
+    @media screen and (max-width: 620px) {
+        max-width: 300px;
+        margin: 24px auto 16px;
+        display: block;
+    }
 `;
 
 export default () => (
@@ -90,15 +126,17 @@ export default () => (
             <Inner>
                 <Grid>
                     <div className="ui-example">
-                        <img src={uiImg} style={{width: '100%'}} />
+                        <UIExampleImg src={uiImg} />
                         <p className="small" style={{textAlign: 'center'}}>
-                            Above is a conceptual design of how the platform will work: you propose a topic and guests suggest questions and recommend guests.
+                            Above is a conceptual design of how the platform will work: you propose a topic and guests
+                            suggest questions and recommend guests.
                         </p>
                     </div>
                     <div className="content">
                         <h2>How does it work?</h2>
                         <p>
-                            Do you have an idea for an episode but you’re not sure how to approach the topic? This is the
+                            Do you have an idea for an episode but you’re not sure how to approach the topic? This is
+                            the
                             perfect opportunity to tap into your audience’s collective wisdom.
                         </p>
                         <p>
@@ -107,8 +145,10 @@ export default () => (
                             answered. They’ll also be able to recommend guests.
                         </p>
                         <p>
-                            The feedback you receive will be a good indicator of whether or not your audience is interested in the topic.
-                            Do your listeners seem curious? Which questions are they up-voting? Does the topic require a deep dive or an overview?
+                            The feedback you receive will be a good indicator of whether or not your audience is
+                            interested in the topic.
+                            Do your listeners seem curious? Which questions are they up-voting? Does the topic require a
+                            deep dive or an overview?
                             Perhaps the topic could merit a series of conversations.
                         </p>
                         <p>
