@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import logoImg from '../img/castQ-logo-horizontal.png';
+import micImg from '../img/grayscale_microphone.png';
 
 import Form from '../components/Form';
 
@@ -29,11 +30,17 @@ const Grid = styled.div`
     
     .right {
       width: 33%;
+      text-align: center;
+      align-self: center;
     }
 `;
 
 const Logo = styled.img`
     max-width: 120px;
+`;
+
+const Microphone = styled.img`
+  max-width: 100px;
 `;
 
 export default () => (
@@ -55,7 +62,7 @@ export default () => (
                         </p>
                     </div>
                     <div className="right">
-                        Placeholder
+                        <Microphone src={micImg}/>
                     </div>
                 </Grid>
             </Inner>
