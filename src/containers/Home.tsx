@@ -47,9 +47,12 @@ export default () => (
             <Inner>
                 <Grid>
                     <div className="left">
-                        <h1>Give your listeners a voice.</h1>
+                        <h1>Give your podcast listeners a voice.</h1>
                         <p>Propose topics you’d like to discuss on your podcast and let your listeners submit their questions and recommend guests.</p>
                         <Form/>
+                        <p className="small">
+                            We’re currently building the first version of the product. Sign up for an invite and we’ll let you know when it’s ready to go.
+                        </p>
                     </div>
                     <div className="right">
                         Placeholder

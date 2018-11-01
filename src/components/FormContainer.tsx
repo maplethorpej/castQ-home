@@ -5,7 +5,7 @@ export const FormContainer = styled.form`
     
     label {
         color: #333333;
-        font-size: .85em;
+        font-size: .95em;
         font-weight: 700;
         display: block;
         margin-bottom: 8px;
@@ -14,10 +14,10 @@ export const FormContainer = styled.form`
     .input-container {
         display: flex;
         input {
-        width: 80%;
+            width: 80%;
         }
         button {
-        width: 20%;
+            width: 20%;
         }
     }
    
@@ -27,7 +27,8 @@ export const FormContainer = styled.form`
         font-family: "Open Sans", sans-serif;
         font-size: .9em;
         border: 1px solid #d1d1d1;
-        border-radius: 3px;
+        border-radius: 3px 0 0 3px;
+        border-right: none;
         
         &:focus {
             outline: none;

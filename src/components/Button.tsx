@@ -8,7 +8,8 @@ export const Button = styled.button`
     background-color: #b72727;
     font-size: 1em;
     font-weight: 700;
-    border-radius: 2px;
+    border-radius: 0 3px 3px 0;
+    border-left: 2px solid rgba(0,0,0, 0.18);
     
     &:focus {
         outline: none;

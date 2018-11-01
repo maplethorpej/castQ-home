@@ -24,6 +24,10 @@ p {
     line-height: 1.4em;
 }
 
+p.small {
+    font-size: .9em;
+}
+
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     color: #cccccc;
 }
