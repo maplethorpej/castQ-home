@@ -112,7 +112,7 @@ export default () => (
                             Perhaps the topic could merit a series of conversations.
                         </p>
                         <p>
-                            The goal is to create better conversations between you, your guests and your listeners.
+                            Our goal is to create better conversations between you, your guests and your listeners.
                         </p>
                     </div>
                 </Grid>
