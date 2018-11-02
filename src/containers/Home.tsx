@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import logoImg from '../img/castQ-logo-horizontal.png';
-import micImg from '../img/grayscale_microphone.png';
+import micImg from '../img/castq_micset_gradient_small.png';
 import uiImg from '../img/castq_ui_example.png';
 
 import Form from '../components/Form';
@@ -37,9 +37,10 @@ const Grid = styled.div`
     display: flex;
     margin: 32px 0;
     justify-content: space-between;
+    align-items: center;
     
     .content {
-      width: 66%;
+      width: 62%;
     }
     
     .cover-image {
@@ -53,7 +54,7 @@ const Grid = styled.div`
     }
     
     @media screen and (max-width: 620px) {
-        flex-direction: column-reverse;
+        flex-direction: column;
         
         .content, .cover-image, .ui-example {
             width: 100%;
@@ -79,7 +80,7 @@ const Logo = styled.img`
 `;
 
 const Microphone = styled.img`
-    max-width: 100px;
+    max-width: 220px;
     
     @media screen and (max-width: 620px) {
         display: none;
@@ -106,6 +107,9 @@ export default () => (
             </header>
             <Inner>
                 <Grid>
+                    <div className="cover-image">
+                        <Microphone src={micImg}/>
+                    </div>
                     <div className="content">
                         <h1>Give your podcast listeners a voice.</h1>
                         <p>Propose topics you’d like to discuss on your podcast and let your listeners submit their
@@ -116,22 +120,12 @@ export default () => (
                             let you know when it’s ready to go.
                         </p>
                     </div>
-                    <div className="cover-image">
-                        <Microphone src={micImg}/>
-                    </div>
                 </Grid>
             </Inner>
         </TopSection>
         <BottomSection>
             <Inner>
                 <Grid>
-                    <div className="ui-example">
-                        <UIExampleImg src={uiImg} />
-                        <p className="small" style={{textAlign: 'center'}}>
-                            Above is a conceptual design of how the platform will work: you propose a topic and guests
-                            suggest questions and recommend guests.
-                        </p>
-                    </div>
                     <div className="content">
                         <h2>How does it work?</h2>
                         <p>
@@ -153,6 +147,13 @@ export default () => (
                         </p>
                         <p>
                             Our goal is to create better conversations between you, your guests and your listeners.
+                        </p>
+                    </div>
+                    <div className="ui-example">
+                        <UIExampleImg src={uiImg} />
+                        <p className="small" style={{textAlign: 'center'}}>
+                            Above is a conceptual design of how the platform will work: you propose a topic and guests
+                            suggest questions and recommend guests.
                         </p>
                     </div>
                 </Grid>
