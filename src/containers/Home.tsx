@@ -36,7 +36,7 @@ const Inner = styled.div`
 
 const Grid = styled.div`
     display: flex;
-    margin: 32px 0;
+    margin: 48px 0;
     justify-content: space-between;
     align-items: center;
     
@@ -109,7 +109,7 @@ export default () => (
             <Inner>
                 <Grid>
                     <div className="content">
-                        <h1>Get listeners engaged with your podcast.</h1>
+                        <h1>Collaboratively create podcast episodes with your listeners.</h1>
                         <p>Propose topics you’d like to discuss on your podcast and let your listeners submit their
                             questions and recommend guests.</p>
                         <Form/>
@@ -160,5 +160,6 @@ export default () => (
                 </Grid>
             </Inner>
         </BottomSection>
+        <TopSection/>
     </div>
 )
