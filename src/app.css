@@ -14,12 +14,13 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-    color: #b72727;
-    font-weight: 400;
+    color: #35a7a0;
+    font-size: 2.8em;
+    font-weight: 300;
 }
 
 h2 {
-    color: #b72727;
+    color: #35a7a0;
     font-weight: 400;
 }
 

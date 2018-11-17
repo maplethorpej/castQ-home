@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const FormContainer = styled.form`
-    margin-top: 32px;
+    margin-top: 48px;
     
     label {
         color: #333333;
@@ -14,10 +14,11 @@ export const FormContainer = styled.form`
     .input-container {
         display: flex;
         input {
-            width: 80%;
+            width: 64%;
         }
         button {
-            width: 20%;
+            width: 36%;
+            min-width: 170px;
         }
         
         @media screen and (max-width: 620px) {
@@ -33,10 +34,10 @@ export const FormContainer = styled.form`
    
     input {
         color: #333333;
-        padding: 8px;
+        padding: 16px;
         font-family: "Open Sans", sans-serif;
         font-size: .9em;
-        border: 1px solid #d1d1d1;
+        border: 1px solid #1bad94;
         border-radius: 3px 0 0 3px;
         border-right: none;
         

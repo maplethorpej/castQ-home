@@ -1,17 +1,18 @@
 import React from 'react'
 import styled from 'styled-components';
 import logoImg from '../img/castQ-logo-horizontal.png';
-import micImg from '../img/castq_micset_gradient_small.png';
+import micImg from '../img/castq_illustration_microphone.png';
 import uiImg from '../img/castq_ui_example.png';
 
 import Form from '../components/Form';
 
 const TopSection = styled.div`
     padding: 32px 0;
+    border-bottom: 20px solid rgba(255,255,255,0.25);
     background: #ffffff; /* Old browsers */
     background: -moz-linear-gradient(-45deg, #ffffff 0%, #efefef 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(-45deg, #ffffff 0%,#efefef 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(135deg, #ffffff 0%,#efefef 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: linear-gradient(135deg, #ffffff 0%,#caf3f0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#efefef',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 `;
 
@@ -107,11 +108,8 @@ export default () => (
             </header>
             <Inner>
                 <Grid>
-                    <div className="cover-image">
-                        <Microphone src={micImg}/>
-                    </div>
                     <div className="content">
-                        <h1>Give your podcast listeners a voice.</h1>
+                        <h1>Get listeners engaged with your podcast.</h1>
                         <p>Propose topics you’d like to discuss on your podcast and let your listeners submit their
                             questions and recommend guests.</p>
                         <Form/>
@@ -119,6 +117,9 @@ export default () => (
                             We’re currently building the first version of the product. Sign up for an invite and we’ll
                             let you know when it’s ready to go.
                         </p>
+                    </div>
+                    <div className="cover-image">
+                        <Microphone src={micImg}/>
                     </div>
                 </Grid>
             </Inner>
@@ -150,7 +151,7 @@ export default () => (
                         </p>
                     </div>
                     <div className="ui-example">
-                        <UIExampleImg src={uiImg} />
+                        <UIExampleImg src={uiImg}/>
                         <p className="small" style={{textAlign: 'center'}}>
                             Above is a conceptual design of how the platform will work: you propose a topic and guests
                             suggest questions and recommend guests.

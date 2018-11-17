@@ -48,7 +48,7 @@ class Form extends React.Component {
                 <input placeholder={`email@podcast.com`} value={email} className={emailError ? 'error' : ''}
                        onChange={(e) => this.updateEmail(e.target.value)}/>
                 <Button onClick={this.handleSubmit} type="submit" disabled={submitting}>
-                    Submit
+                    Request Invite
                 </Button>
                 </div>
             </div>
