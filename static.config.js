@@ -37,9 +37,9 @@ export default {
         <link rel="stylesheet" href="https://use.typekit.net/eme3hjr.css" />
         <meta property="og:title" content="CastQ" />
         <meta property="og:site_name" content="CastQ" />
-        <meta property="og:description" content="CastQ allows podcasters to get feedback from their listeners about upcoming episodes." />
+        <meta property="og:description" content="Collaboratively create podcast episodes with your listeners." />
         <meta property="og:url" content="https://castq.io" />
-        <meta property="og:image" content="https://castq.io/castq_social.jpg" />
+        <meta property="og:image" content="https://castq.io/castq_social_v3.jpg" />
       </Head>
       <Body>{children}</Body>
     </Html>
